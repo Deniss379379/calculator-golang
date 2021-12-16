@@ -8,7 +8,7 @@ const errorMessageOperator = "invalid operator"
 const errorMessageDivision = "division by zero is impossible"
 
 
-func main() {
+func calculator () {
 
   var number1, number2 float64
 
@@ -44,5 +44,12 @@ func main() {
       fmt.Println(errorMessageOperator)
 
   }
+}
+
+
+func main() {
+
+  calculator()
+
 }
 
