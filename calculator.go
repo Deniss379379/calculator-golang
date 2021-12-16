@@ -4,6 +4,10 @@ import (
     "fmt"
 )
 
+const errorMessageOperator = "invalid operator"
+const errorMessageDivision = "division by zero is impossible"
+
+
 func main() {
 
   var number1, number2 float64
@@ -16,24 +20,28 @@ func main() {
   fmt.Print("Second number: ")
   fmt.Scanln(&number2)
 
-  fmt.Print("Operator ( + - * / ): ")
+  fmt.Print("Enter ( + - * / ): ")
   fmt.Scanln(&operator)
 
   switch operator {
     case "+" :
       fmt.Print(number1 + number2)
+
     case "-" :
       fmt.Print(number1 - number2)
+
     case "*" :
       fmt.Print(number1 * number2)
+
     case "/" :
       if number2 == 0.0 {
-        fmt.Println("division by zero is impossible")
+        fmt.Println(errorMessageDivision)
       } else {
       fmt.Print(number1 / number2)
       }
+
     default:
-      fmt.Println("invalid operator")
+      fmt.Println(errorMessageOperator)
 
   }
 }
